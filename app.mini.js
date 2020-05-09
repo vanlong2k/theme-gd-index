@@ -21222,12 +21222,12 @@
        var r = [];
        for (var i in t) {
         var o = t[i];
-        "" != o && ((n += (o = decodeURI(o)) + "/").match("/[0-9]+:/")[0] === n && (o = "首页"), r.push({
+        "" != o && ((n += (o = decodeURI(o)) + "/").match("/[0-9]+:/")[0] === n && (o = "Trang chủ"), r.push({
          path: n,
          title: o
         }))
        }
-       this.navs = r, 1 == r.length && "首页" === r[0].title && (this.navs = [])
+       this.navs = r, 1 == r.length && "Trang chủ" === r[0].title && (this.navs = [])
       }
      }
     }
@@ -21355,18 +21355,18 @@
      files: [],
      loading: !1,
      columns: [{
-      name: "文件",
+      name: "Tệp",
       style: ""
      }, {
-      name: "修改时间",
+      name: "lần cuối thay đổi",
       style: "width:20%",
       class: "is-hidden-mobile is-hidden-touch"
      }, {
-      name: "大小",
+      name: "kích thước",
       style: "width:10.5%",
       class: "is-hidden-mobile is-hidden-touch"
      }, {
-      name: "操作",
+      name: "sở hữu",
       style: "width:10%",
       class: "is-hidden-mobile is-hidden-touch"
      }],
@@ -21468,7 +21468,7 @@
    },
    watch: {
     option(e) {
-     this.content = "加载中...", d(this.option, e => {
+     this.content = "Đang tải...", d(this.option, e => {
       this.content = e
      })
     }
