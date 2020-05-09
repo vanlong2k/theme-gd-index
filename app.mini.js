@@ -4578,7 +4578,7 @@
      return e.from("AA" + this.videourl + "ZZ").toString("base64")
     }
    },
-   template: '\n    <div class="content">\n        <div class="video-content">\n          <iframe width="100%" height="100%" :src="apiurl" frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="true" allowfullscreen="true"></iframe>\n        </div>\n        <div class="card">\n            <header class="card-header">\n                <p class="card-header-title">\n                    <span class="icon"><i class="fa fa-play-circle" aria-hidden="true"></i></span>\n                    播放 /\n                    <span class="icon"><i class="fa fa-download" aria-hidden="true"></i></span>\n                    下载\n                </p>\n            </header>\n            <div class="card-content">\n                <div class="content">\n                  <div class="field">\n                    <label class="label">下载地址</label>\n                    <div class="control">\n                      <input class="input" type="text" :value="decodeURIComponent(videourl)">\n                    </div>\n                  </div>\n                  <div class="columns is-mobile is-multiline has-text-centered">\n                    <div class="column" v-for="item in players">\n                      <p class="heading">\n                        <a :href="item.scheme">\n                          <figure class="image is-48x48" style="margin: 0 auto;">\n                            <img class="icon" :src="item.icon" />\n                          </figure>\n                        </a>\n                      </p>\n                      <p class="">{{item.name}}</p>\n                    </div>\n                  </div>\n                </div>\n            </div>  \n        </div>\n    </div>\n  '
+   template: '\n    <div class="content">\n        <div class="video-content">\n          <iframe width="100%" height="100%" :src="apiurl" frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="true" allowfullscreen="true"></iframe>\n        </div>\n        <div class="card">\n            <header class="card-header">\n                <p class="card-header-title">\n                    <span class="icon"><i class="fa fa-play-circle" aria-hidden="true"></i></span>\n                    Play /\n                    <span class="icon"><i class="fa fa-download" aria-hidden="true"></i></span>\n                    Download\n                </p>\n            </header>\n            <div class="card-content">\n                <div class="content">\n                  <div class="field">\n                    <label class="label">Link Download</label>\n                    <div class="control">\n                      <input class="input" type="text" :value="decodeURIComponent(videourl)">\n                    </div>\n                  </div>\n                  <div class="columns is-mobile is-multiline has-text-centered">\n                    <div class="column" v-for="item in players">\n                      <p class="heading">\n                        <a :href="item.scheme">\n                          <figure class="image is-48x48" style="margin: 0 auto;">\n                            <img class="icon" :src="item.icon" />\n                          </figure>\n                        </a>\n                      </p>\n                      <p class="">{{item.name}}</p>\n                    </div>\n                  </div>\n                </div>\n            </div>  \n        </div>\n    </div>\n  '
   });
   t.a = r
  }).call(this, n(19).Buffer)
@@ -21204,7 +21204,7 @@
     return this.gds.filter(e => e.name !== this.currgd.name)
    }
   },
-  template: '\n              <nav class="navbar is-dark" role="navigation" aria-label="main navigation">\n                  <div class="container">\n                      <div class="navbar-brand">\n                          <a class="navbar-item" :href="currgd.id">\n                              <h3 class="title is-3 has-text-white">{{siteName}}</h3>\n                          </a>\n                          <a role="button" :class="\'navbar-burger burger \'+(isActive?\'is-active\':\'\')" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"\n                          @click="burgerClick">\n                              <span aria-hidden="true"></span>\n                              <span aria-hidden="true"></span>\n                              <span aria-hidden="true"></span>\n                          </a>\n                      </div>\n                      <div id="navbarBasicExample" :class="\'navbar-menu \'+(isActive?\'is-active\':\'\')">\n                          <div class="navbar-start">\n                            <div class="navbar-item has-dropdown is-hoverable" v-if="gds.length>0 && getCurrGD.length>0">\n                                <a class="navbar-link">\n                                    {{this.currgd.name}}\n                                </a>\n                                <div class="navbar-dropdown is-boxed">\n                                    <a class="navbar-item" @click="changeItem(item)" v-for="item in getCurrGD">\n                                        {{item.name}}\n                                    </a>\n                                </div>\n                            </div>\n                          </div>\n  \n                          <div class="navbar-end">\n                              <div class="navbar-item">\n                                  <div class="field is-grouped">\n                                      <p class="control has-icons-left" style="width:100%;">\n                                          <input class="input is-rounded has-text-grey" @keyup.enter="query" v-model="param" type="search" placeholder="Search or jump to…">\n                                          <span class="icon is-small is-left">\n                                              <i class="fas fa-search"></i>\n                                          </span>\n                                      </p>\n                                  </div>\n                              </div>\n                              \x3c!--<a class="navbar-item" target="_blank">\n                                  <i class="fa fa-question-circle" aria-hidden="true"></i>\n                              </a>--\x3e\n                              <a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/Aicirou/goindex-theme-acrou">\n                                <i class="fab fa-github"></i> \n                              </a>\n                          </div>\n                      </div>\n                  </div>\n              </nav>\n          '
+  template: '\n              <nav class="navbar is-dark" role="navigation" aria-label="main navigation">\n                  <div class="container">\n                      <div class="navbar-brand">\n                          <a class="navbar-item" :href="currgd.id">\n                              <h3 class="title is-3 has-text-white">{{siteName}}</h3>\n                          </a>\n                          <a role="button" :class="\'navbar-burger burger \'+(isActive?\'is-active\':\'\')" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"\n                          @click="burgerClick">\n                              <span aria-hidden="true"></span>\n                              <span aria-hidden="true"></span>\n                              <span aria-hidden="true"></span>\n                          </a>\n                      </div>\n                      <div id="navbarBasicExample" :class="\'navbar-menu \'+(isActive?\'is-active\':\'\')">\n                          <div class="navbar-start">\n                            <div class="navbar-item has-dropdown is-hoverable" v-if="gds.length>0 && getCurrGD.length>0">\n                                <a class="navbar-link">\n                                    {{this.currgd.name}}\n                                </a>\n                                <div class="navbar-dropdown is-boxed">\n                                    <a class="navbar-item" @click="changeItem(item)" v-for="item in getCurrGD">\n                                        {{item.name}}\n                                    </a>\n                                </div>\n                            </div>\n                          </div>\n  \n                          <div class="navbar-end">\n                              <div class="navbar-item">\n                                  <div class="field is-grouped">\n                                      <p class="control has-icons-left" style="width:100%;">\n                                          <input class="input is-rounded has-text-grey" @keyup.enter="query" v-model="param" type="search" placeholder="Search or jump to…">\n                                          <span class="icon is-small is-left">\n                                              <i class="fas fa-search"></i>\n                                          </span>\n                                      </p>\n                                  </div>\n                              </div>\n                              \x3c!--<a class="navbar-item" target="_blank">\n                                  <i class="fa fa-question-circle" aria-hidden="true"></i>\n                              </a>--\x3e\n                              <a class="navbar-item" target="_blank" rel="noopener" title="Blog" href="https://nguyenvanlong.blog/goindex-theme-acrou">\n                                <i class="fab fa-github"></i> \n                              </a>\n                          </div>\n                      </div>\n                  </div>\n              </nav>\n          '
  });
  var o = r.a.component("breadcrumb", {
    data: function() {
@@ -21222,12 +21222,12 @@
        var r = [];
        for (var i in t) {
         var o = t[i];
-        "" != o && ((n += (o = decodeURI(o)) + "/").match("/[0-9]+:/")[0] === n && (o = "首页"), r.push({
+        "" != o && ((n += (o = decodeURI(o)) + "/").match("/[0-9]+:/")[0] === n && (o = "Trang chủ"), r.push({
          path: n,
          title: o
         }))
        }
-       this.navs = r, 1 == r.length && "首页" === r[0].title && (this.navs = [])
+       this.navs = r, 1 == r.length && "Trang chủ" === r[0].title && (this.navs = [])
       }
      }
     }
@@ -21355,18 +21355,18 @@
      files: [],
      loading: !1,
      columns: [{
-      name: "文件",
+      name: "Files",
       style: ""
      }, {
-      name: "修改时间",
+      name: "Created date",
       style: "width:20%",
       class: "is-hidden-mobile is-hidden-touch"
      }, {
-      name: "大小",
+      name: "Size",
       style: "width:10.5%",
       class: "is-hidden-mobile is-hidden-touch"
      }, {
-      name: "操作",
+      name: "Action",
       style: "width:10%",
       class: "is-hidden-mobile is-hidden-touch"
      }],
@@ -21443,7 +21443,7 @@
      })
     },
     checkPassword(e) {
-     var t = prompt("目录加密，请输入密码", "");
+     var t = prompt("Thư mục được bảo vê ! nhập mật khẩu mở khoá !!!", "");
      localStorage.setItem("password" + e, t), null != t && "" != t ? this.render(e) : history.go(-1)
     },
     go(e, t = "view") {
@@ -21468,7 +21468,7 @@
    },
    watch: {
     option(e) {
-     this.content = "加载中...", d(this.option, e => {
+     this.content = "Đang tải...", d(this.option, e => {
       this.content = e
      })
     }
