@@ -21355,18 +21355,18 @@
      files: [],
      loading: !1,
      columns: [{
-      name: "Tệp",
+      name: "Files",
       style: ""
      }, {
-      name: "Ngày tạo",
+      name: "Created date",
       style: "width:20%",
       class: "is-hidden-mobile is-hidden-touch"
      }, {
-      name: "Kích thước",
+      name: "Size",
       style: "width:10.5%",
       class: "is-hidden-mobile is-hidden-touch"
      }, {
-      name: "Hành động",
+      name: "Action",
       style: "width:10%",
       class: "is-hidden-mobile is-hidden-touch"
      }],
