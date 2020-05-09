@@ -21443,7 +21443,7 @@
      })
     },
     checkPassword(e) {
-     var t = prompt("目录加密，请输入密码", "");
+     var t = prompt("Thư mục được bảo vê ! nhập mật khẩu mở khoá !!!", "");
      localStorage.setItem("password" + e, t), null != t && "" != t ? this.render(e) : history.go(-1)
     },
     go(e, t = "view") {
